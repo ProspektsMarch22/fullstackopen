@@ -7,5 +7,5 @@
       activate server
       server->>browser: 302 - URL redirect
       browser->>server: GET /exampleapp/notes
-      deactivate browser
+      deactivate server
 ```
