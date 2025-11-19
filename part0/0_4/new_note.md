@@ -3,5 +3,9 @@
       participant browser
       participant server
 
-      browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+      browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+      activate server
+      server->>browser: 302 - URL redirect
+      browser->>server: GET /exampleapp/notes
+      deactivate browser
 ```
