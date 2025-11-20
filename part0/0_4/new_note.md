@@ -4,7 +4,7 @@
       participant server
 
       browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note (form sent)
-      Note right of browser: as soon as the form is submitted, it makes a POST request.
+      Note right of browser: User writes something into the text field and clicks the Save button.
       activate server
       server-->>browser: 302 - URL redirect (refresh page)
       deactivate server
