@@ -27,12 +27,12 @@
       server-->>browser: the JavaScript file
       deactivate server
 
-      Note right of browser: The browser starts executing the script and fetches the updated JSON from the server.
+      Note right of browser: The browser starts executing the script and fetches the updated JSON from the server through AJAX.
 
       browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
       activate server
-      server-->>browser: [{...},...]
+      server-->>browser: [{"content": ..., "date": ...},...]
       deactivate server
 
-      Note right of browser: The browser executes the callback function that renders the notes
+      Note right of browser: The browser executes the xhttp.onreadystatechange callback function and parses the JSON data, rendering the notes.
 ```
