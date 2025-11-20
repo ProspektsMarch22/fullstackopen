@@ -10,10 +10,7 @@
       server-->>browser: 302 - URL redirect (refresh page)
       deactivate server
 
-      Note left of server: The POST request is handled by a JavaScript program writteni in the server, 
-    that pushes for the notes array an object with the properties 'conten' and 'date', 
-    with 'content' being the data sent as the body of the POST request. 
-    The script returns a redirection request for '/notes'.
+      Note left of server: The POST request is handled by a JavaScript program written in the server, \nthat pushes for the notes array an object with the properties 'content' and 'date', \nwith 'content' being the data sent as the body of the POST request. \nThe script returns a redirection request for '/notes'.
 
       browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
       activate server
