@@ -3,13 +3,17 @@
       participant browser
       participant server
 
-      browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note (form sent)
+      Note right of broswer: as soon as the form is submitted, it makes a POST request.
+      
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note (form sent)
       activate server
       server-->>browser: 302 - URL redirect (refresh page)
       deactivate server
 
-      Note left of broswer: as soon as the form is submitted, it makes a POST request.
-      Note right of server: The POST request is handled by a JavaScript program written in the server, that pushes for the notes array an object with the properties 'conten' and 'date', with 'content' being the data sent as the body of the POST request. The script returns a redirection request for '/notes'.
+      Note left of server: The POST request is handled by a JavaScript program writteni in the server, 
+    that pushes for the notes array an object with the properties 'conten' and 'date', 
+    with 'content' being the data sent as the body of the POST request. 
+    The script returns a redirection request for '/notes'.
 
       browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
       activate server
