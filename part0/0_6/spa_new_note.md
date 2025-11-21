@@ -3,7 +3,7 @@
   title: In-browser form submission and notes redrawing
 ---
   flowchart TD
-    A@{ shape: manual-input, label: "User fills text field and clicks save button"} --> B@{ shape: rounded, label: "form.onsubmit() event triggered"} --> C@{ shape: rect, label: "e.preventDefault()"} --> [[form data is stored into var "note", then note is pushed into "notes" array]]
+    A@{ shape: manual-input, label: "User fills text field and clicks save button"} --> B@{ shape: rounded, label: "form.onsubmit() event triggered"} --> C@{ shape: rect, label: "e.preventDefault()"} --> { shape: rect, label: "form data is stored into var 'note', then note is pushed into 'notes' array" }
 
 ```
 
